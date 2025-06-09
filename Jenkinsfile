@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage("Code Build") {
+        stage("Code Build And Test") {
             steps {
                 echo "Code Build Stage"
                 sh "docker build -t ${DOCKER_IMAGE} ."
@@ -30,13 +30,6 @@ pipeline {
                     sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
                     sh "docker push ${DOCKER_IMAGE}"
                 }
-            }
-        }
-
-        stage("Test") {
-            steps {
-                echo "Testing........."
-                
             }
         }
 
