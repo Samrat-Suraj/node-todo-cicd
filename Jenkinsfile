@@ -1,5 +1,5 @@
 pipeline {
-    agent "agent1"
+    agent label {"node-agent1"}
 
     environment {
         DOCKER_IMAGE = "samratsooraj/node_app_practice:latest"
