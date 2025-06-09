@@ -2,6 +2,6 @@ version: '3.9'
 
 services:
   web:
-    image: samratsooraj/node_app_test:latest
+    image: samratsooraj/node_app_practice:latest
     ports:
       - "8000:8000"
